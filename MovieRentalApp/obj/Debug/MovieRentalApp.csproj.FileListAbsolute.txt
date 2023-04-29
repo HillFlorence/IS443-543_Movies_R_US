@@ -1,0 +1,15 @@
+C:\Users\hillw\source\repos\MovieRentalApp\MovieRentalApp\bin\Debug\MovieRentalApp.exe.config
+C:\Users\hillw\source\repos\MovieRentalApp\MovieRentalApp\bin\Debug\MovieRentalApp.exe
+C:\Users\hillw\source\repos\MovieRentalApp\MovieRentalApp\bin\Debug\MovieRentalApp.pdb
+C:\Users\hillw\source\repos\MovieRentalApp\MovieRentalApp\obj\Debug\MovieRentalApp.csproj.AssemblyReference.cache
+C:\Users\hillw\source\repos\MovieRentalApp\MovieRentalApp\obj\Debug\MovieRentalApp.csproj.SuggestedBindingRedirects.cache
+C:\Users\hillw\source\repos\MovieRentalApp\MovieRentalApp\obj\Debug\MovieRentalApp.Properties.Resources.resources
+C:\Users\hillw\source\repos\MovieRentalApp\MovieRentalApp\obj\Debug\MovieRentalApp.csproj.GenerateResource.cache
+C:\Users\hillw\source\repos\MovieRentalApp\MovieRentalApp\obj\Debug\MovieRentalApp.csproj.CoreCompileInputs.cache
+C:\Users\hillw\source\repos\MovieRentalApp\MovieRentalApp\obj\Debug\MovieRentalApp.exe
+C:\Users\hillw\source\repos\MovieRentalApp\MovieRentalApp\obj\Debug\MovieRentalApp.pdb
+C:\Users\hillw\source\repos\MovieRentalApp\MovieRentalApp\obj\Debug\MovieRentalApp.Login.resources
+C:\Users\hillw\source\repos\MovieRentalApp\MovieRentalApp\obj\Debug\MovieRentalApp.AddNewUser.resources
+C:\Users\hillw\source\repos\MovieRentalApp\MovieRentalApp\obj\Debug\MovieRentalApp.AddNewMovie.resources
+C:\Users\hillw\source\repos\MovieRentalApp\MovieRentalApp\obj\Debug\MovieRentalApp.MovieInventory.resources
+C:\Users\hillw\source\repos\MovieRentalApp\MovieRentalApp\obj\Debug\MovieRentalApp.MovieListing.resources
