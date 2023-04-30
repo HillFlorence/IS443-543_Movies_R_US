@@ -38,7 +38,7 @@ namespace MovieRentalApp
             string username = textBoxUsername.Text;
             string password = textBoxPassword.Text;
 
-            string sqlQuery = "SELECT COUNT(*) FROM CUSTOMER WHERE Ussename=@Username AND Password=@Password";
+            string sqlQuery = "SELECT COUNT(*) FROM CUSTOMER WHERE Username=@Username AND Password=@Password";
 
             using (SqlConnection connection = new SqlConnection(conString))
             
@@ -79,6 +79,20 @@ namespace MovieRentalApp
         private void labelUserName_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonCreateAccount_Click(object sender, EventArgs e)
+        {
+            AddNewUser addNewUser = new AddNewUser();
+            Login login = new Login();
+            login.Close();
+            addNewUser.Show();
+        }
+
+        private void buttonClear_Click(object sender, EventArgs e)
+        {
+            textBoxUsername.Clear();
+            textBoxPassword.Clear();
         }
     }
     
