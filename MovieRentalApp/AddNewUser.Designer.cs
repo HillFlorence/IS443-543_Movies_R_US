@@ -52,6 +52,8 @@
             this.textboxPassword = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.comboBoxPlan = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,7 +85,7 @@
             // 
             // buttonCreateMyAccount
             // 
-            this.buttonCreateMyAccount.Location = new System.Drawing.Point(701, 282);
+            this.buttonCreateMyAccount.Location = new System.Drawing.Point(688, 347);
             this.buttonCreateMyAccount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonCreateMyAccount.Name = "buttonCreateMyAccount";
             this.buttonCreateMyAccount.Size = new System.Drawing.Size(128, 42);
@@ -253,7 +255,7 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(725, 358);
+            this.btnLogin.Location = new System.Drawing.Point(723, 411);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(75, 23);
             this.btnLogin.TabIndex = 26;
@@ -264,18 +266,44 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(647, 338);
+            this.label2.Location = new System.Drawing.Point(643, 391);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(243, 17);
             this.label2.TabIndex = 27;
             this.label2.Text = "Already have an account? Click login!";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(814, 285);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(40, 17);
+            this.label4.TabIndex = 28;
+            this.label4.Text = "Plan:";
+            // 
+            // comboBoxPlan
+            // 
+            this.comboBoxPlan.FormattingEnabled = true;
+            this.comboBoxPlan.Items.AddRange(new object[] {
+            "Basic",
+            "Silver",
+            "Gold",
+            "Platinum",
+            "Rental Plus"});
+            this.comboBoxPlan.Location = new System.Drawing.Point(895, 285);
+            this.comboBoxPlan.Name = "comboBoxPlan";
+            this.comboBoxPlan.Size = new System.Drawing.Size(163, 24);
+            this.comboBoxPlan.TabIndex = 29;
+            this.comboBoxPlan.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // AddNewUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1090, 459);
+            this.Controls.Add(this.comboBoxPlan);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.textboxPassword);
@@ -335,5 +363,7 @@
         private System.Windows.Forms.TextBox textboxPassword;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox comboBoxPlan;
     }
 }

@@ -29,7 +29,7 @@ namespace MovieRentalApp
             string conString = Properties.Settings.Default.MovieDbConnectionString;
             SqlConnection connection = new SqlConnection(conString);
             connection.Open();
-            string insertQuery = "INSERT INTO customer(username, password, email, phone_number, street_address, city, state, FirstName, LastName) VALUES (@username, @password, @email, @phone_number, @street_address, @city, @state, @FirstName, @LastName)";
+            string insertQuery = "INSERT INTO customer(username, password, email, phone_number, street_address, city, state, firstName, lastName, plan_id) VALUES (@username, @password, @email, @phone_number, @street_address, @city, @state, @FirstName, @LastName, @RentalPlan)";
             SqlCommand command = new SqlCommand(insertQuery, connection);
             command.Parameters.AddWithValue("@username", textboxUsername.Text);
             command.Parameters.AddWithValue("@password", textboxPassword.Text);
@@ -40,7 +40,28 @@ namespace MovieRentalApp
             command.Parameters.AddWithValue("@state", textboxState.Text);
             command.Parameters.AddWithValue("@FirstName", textboxFirstName.Text);
             command.Parameters.AddWithValue("@LastName", textboxLastName.Text);
+            if (comboBoxPlan.Text == "Basic")
+            {
+                command.Parameters.AddWithValue("@RentalPlan", 1);
+            }
+            else if (comboBoxPlan.Text == "Silver")
+            {
+                command.Parameters.AddWithValue("@RentalPlan", 2);
+            }
+            else if (comboBoxPlan.Text == "Gold")
+            {
+                command.Parameters.AddWithValue("@RentalPlan", 3);
+            }
+            else if (comboBoxPlan.Text == "Platinum")
+            {
+                command.Parameters.AddWithValue("@RentalPlan", 4);
+            }
+            else if (comboBoxPlan.Text == "Rental Plus")
+            {
+                command.Parameters.AddWithValue("@RentalPlan", 5);
+            }
             command.ExecuteNonQuery();
+           
             connection.Close();
             textboxUsername.Clear();
             textboxPassword.Clear();
@@ -51,7 +72,11 @@ namespace MovieRentalApp
             textboxState.Clear();
             textboxFirstName.Clear();
             textboxLastName.Clear();
-
+            MessageBox.Show("Sign up successful!! Login now!");
+            AddNewUser addNewUser = new AddNewUser();
+            Login login = new Login();
+            login.Show();
+            addNewUser.Close();
 
         }
 
@@ -71,6 +96,11 @@ namespace MovieRentalApp
             AddNewUser addNewUser = new AddNewUser();
             addNewUser.Close();
             login.Show();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

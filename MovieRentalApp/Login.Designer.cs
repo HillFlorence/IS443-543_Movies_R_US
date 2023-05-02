@@ -42,6 +42,7 @@
             this.buttonClear = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.customerID = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -168,11 +169,22 @@
             this.label1.TabIndex = 23;
             this.label1.Text = "Don\'t have an account? Create it now!";
             // 
+            // customerID
+            // 
+            //this.customerID.AutoSize = true;
+            //this.customerID.Location = new System.Drawing.Point(348, 197);
+            //this.customerID.Name = "customerID";
+            //this.customerID.Size = new System.Drawing.Size(119, 17);
+            //this.customerID.TabIndex = 24;
+            //this.customerID.Text = "Show CustomerID";
+            //this.customerID.Click += new System.EventHandler(this.showCustomerID);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(668, 464);
+            this.Controls.Add(this.customerID);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.buttonClose2);
@@ -208,5 +220,6 @@
         private System.Windows.Forms.Button buttonClose2;
         private System.Windows.Forms.Button buttonClear;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label customerID;
     }
 }

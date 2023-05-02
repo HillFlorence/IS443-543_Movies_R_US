@@ -51,7 +51,11 @@
             this.labelSearchTerm = new System.Windows.Forms.Label();
             this.buttonClose = new System.Windows.Forms.Button();
             this.labelSlogan = new System.Windows.Forms.Label();
-            this.buttonSeeMovieListing = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lstMovies = new System.Windows.Forms.ListView();
+            this.btnCheckout = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mOVIEBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.movieDbDataSet)).BeginInit();
@@ -75,13 +79,14 @@
             this.moviestatusDataGridViewTextBoxColumn,
             this.taglineDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.mOVIEBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 129);
+            this.dataGridView1.Location = new System.Drawing.Point(6, 102);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(1433, 308);
+            this.dataGridView1.Size = new System.Drawing.Size(1274, 231);
             this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // movieidDataGridViewTextBoxColumn
             // 
@@ -183,9 +188,10 @@
             // 
             // buttonSearch
             // 
-            this.buttonSearch.Location = new System.Drawing.Point(844, 31);
+            this.buttonSearch.Location = new System.Drawing.Point(750, 25);
+            this.buttonSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonSearch.Name = "buttonSearch";
-            this.buttonSearch.Size = new System.Drawing.Size(75, 30);
+            this.buttonSearch.Size = new System.Drawing.Size(67, 24);
             this.buttonSearch.TabIndex = 2;
             this.buttonSearch.Text = "Search";
             this.buttonSearch.UseVisualStyleBackColor = true;
@@ -193,9 +199,10 @@
             // 
             // textBoxSearchTerm
             // 
-            this.textBoxSearchTerm.Location = new System.Drawing.Point(665, 31);
+            this.textBoxSearchTerm.Location = new System.Drawing.Point(591, 25);
+            this.textBoxSearchTerm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxSearchTerm.Name = "textBoxSearchTerm";
-            this.textBoxSearchTerm.Size = new System.Drawing.Size(164, 26);
+            this.textBoxSearchTerm.Size = new System.Drawing.Size(146, 22);
             this.textBoxSearchTerm.TabIndex = 3;
             // 
             // bindingSource1
@@ -217,17 +224,18 @@
             // labelSearchTerm
             // 
             this.labelSearchTerm.AutoSize = true;
-            this.labelSearchTerm.Location = new System.Drawing.Point(555, 37);
+            this.labelSearchTerm.Location = new System.Drawing.Point(493, 30);
             this.labelSearchTerm.Name = "labelSearchTerm";
-            this.labelSearchTerm.Size = new System.Drawing.Size(104, 20);
+            this.labelSearchTerm.Size = new System.Drawing.Size(94, 17);
             this.labelSearchTerm.TabIndex = 4;
             this.labelSearchTerm.Text = "Search Term:";
             // 
             // buttonClose
             // 
-            this.buttonClose.Location = new System.Drawing.Point(1115, 460);
+            this.buttonClose.Location = new System.Drawing.Point(886, 22);
+            this.buttonClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonClose.Name = "buttonClose";
-            this.buttonClose.Size = new System.Drawing.Size(75, 35);
+            this.buttonClose.Size = new System.Drawing.Size(67, 28);
             this.buttonClose.TabIndex = 6;
             this.buttonClose.Text = "Close";
             this.buttonClose.UseVisualStyleBackColor = true;
@@ -237,33 +245,74 @@
             // 
             this.labelSlogan.AutoSize = true;
             this.labelSlogan.Font = new System.Drawing.Font("Freestyle Script", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSlogan.Location = new System.Drawing.Point(52, 37);
+            this.labelSlogan.Location = new System.Drawing.Point(46, 30);
             this.labelSlogan.Name = "labelSlogan";
-            this.labelSlogan.Size = new System.Drawing.Size(417, 43);
+            this.labelSlogan.Size = new System.Drawing.Size(340, 36);
             this.labelSlogan.TabIndex = 7;
             this.labelSlogan.Text = "Ssh ... The Movie is About to Start!";
             // 
-            // buttonSeeMovieListing
+            // label1
             // 
-            this.buttonSeeMovieListing.Location = new System.Drawing.Point(1099, 38);
-            this.buttonSeeMovieListing.Name = "buttonSeeMovieListing";
-            this.buttonSeeMovieListing.Size = new System.Drawing.Size(120, 27);
-            this.buttonSeeMovieListing.TabIndex = 8;
-            this.buttonSeeMovieListing.Text = "See my List";
-            this.buttonSeeMovieListing.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(80, 372);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(111, 17);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Selected Movies";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // lstMovies
+            // 
+            this.lstMovies.HideSelection = false;
+            this.lstMovies.Location = new System.Drawing.Point(197, 338);
+            this.lstMovies.Name = "lstMovies";
+            this.lstMovies.Size = new System.Drawing.Size(1051, 140);
+            this.lstMovies.TabIndex = 10;
+            this.lstMovies.UseCompatibleStateImageBehavior = false;
+            // 
+            // btnCheckout
+            // 
+            this.btnCheckout.Location = new System.Drawing.Point(338, 484);
+            this.btnCheckout.Name = "btnCheckout";
+            this.btnCheckout.Size = new System.Drawing.Size(120, 31);
+            this.btnCheckout.TabIndex = 11;
+            this.btnCheckout.Text = "Checkout";
+            this.btnCheckout.UseVisualStyleBackColor = true;
+            this.btnCheckout.Click += new System.EventHandler(this.btnCheckout_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(496, 484);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(106, 31);
+            this.btnCancel.TabIndex = 12;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(0, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 0;
             // 
             // MovieInventory
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1454, 507);
-            this.Controls.Add(this.buttonSeeMovieListing);
+            this.ClientSize = new System.Drawing.Size(1292, 571);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnCheckout);
+            this.Controls.Add(this.lstMovies);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.labelSlogan);
             this.Controls.Add(this.buttonClose);
             this.Controls.Add(this.labelSearchTerm);
             this.Controls.Add(this.textBoxSearchTerm);
             this.Controls.Add(this.buttonSearch);
             this.Controls.Add(this.dataGridView1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MovieInventory";
             this.Text = "Movie Rental - Movie Inventory (c) 2023, Movies-R-US";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -300,7 +349,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn runtimeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn moviestatusDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn taglineDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button buttonSeeMovieListing;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ListView lstMovies;
+        private System.Windows.Forms.Button btnCheckout;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button button1;
     }
 }
 
